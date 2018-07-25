@@ -11,9 +11,7 @@
 
       //$vinho = Vinho::create($request->all());
 
-      return response()->json($request)
-        ->header('Access-Control-Allow-Origin', '*')
-      ;
+      return response()->json($request);
     }
 
     public function updateVinho(Request $request, $id){
