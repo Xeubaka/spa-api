@@ -20,7 +20,6 @@ $router->group(['prefix' => 'vinho/'], function() use ($router)
   $router->post('add', 'VinhoController@createVinho');
   $router->put('view/{id}', 'VinhoController@updateVinho');
   $router->delete('delete/{id}', 'VinhoController@deleteVinho');
-  $router->get('index', 'VinhoController@index');
 });
 $router->get('/venda', 'VendaController@index');
 $router->group(['prefix' => 'venda/'], function() use ($router)
