@@ -5,7 +5,7 @@
   class Vinho extends Model
   {
     public $table = "vinho";
-    protected $data = ['id', 'nome', 'tipo', 'peso'];
+    protected $fillable = ['id', 'nome', 'tipo', 'peso'];
 
   }
 

@@ -7,17 +7,16 @@
 
   class VendaController extends Controller
   {
-    public function createVinho(Request $request){
+    public function createVenda(Request $request){
 
       $venda = Venda::create($request->all());
 
-      return response()->json($venda)
+      return response()->json($venda, 201)
         ->header('Access-Control-Allow-Origin', '*')
-        ->header('Access-Control-Allow-Origin', 'GET, POST, PUT, DELETE')
       ;
     }
 
-    public function updateVinho(Request $request, $id){
+    public function updateVenda(Request $request, $id){
       $venda = Venda::find($id);
       $venda->nome = $request->input('nome');
       $venda->tipo = $request->input('tipo');
@@ -26,11 +25,10 @@
 
       return response()->json($venda)
         ->header('Access-Control-Allow-Origin', '*')
-        ->header('Access-Control-Allow-Origin', 'GET, POST, PUT, DELETE')
       ;
     }
 
-    public function deleteVinho($id){
+    public function deleteVenda($id){
       $venda = Venda::find($id);
       $venda->delete();
 

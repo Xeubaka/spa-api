@@ -26,6 +26,7 @@ class CrateTablePedido extends Migration
             $table->increments('id');
             $table->integer('id_venda');
             $table->integer('id_vinho');
+            $table->timestamps();
         });
     }
 

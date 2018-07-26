@@ -28,6 +28,7 @@ class CrateTableVinho extends Migration
             $table->string('nome', 20);
             $table->string('tipo', 20);
             $table->float('peso', 6, 3);
+            $table->timestamps();
         });
     }
 

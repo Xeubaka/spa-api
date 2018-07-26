@@ -5,7 +5,7 @@
   class Pedido extends Model
   {
     public $table = 'pedido';
-    protected $data = ['id', 'id_venda', 'id_vinho'];
+    protected $fillable = ['id', 'id_venda', 'id_vinho'];
   }
 
 ?>

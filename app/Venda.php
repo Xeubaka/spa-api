@@ -5,7 +5,7 @@
   class Venda extends Model
   {
     public $table = "venda";
-    protected $data = ['id', 'distancia', 'frete'];
+    protected $fillable = ['id', 'distancia', 'frete'];
   }
 
 ?>

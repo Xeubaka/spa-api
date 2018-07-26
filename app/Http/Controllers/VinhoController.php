@@ -9,9 +9,9 @@
   {
     public function createVinho(Request $request){
 
-      //$vinho = Vinho::create($request->all());
+      $vinho = Vinho::create($request->all());
 
-      return response()->json($request)
+      return response()->json($vinho, 201)
         ->header('Access-Control-Allow-Origin', '*')
       ;
     }

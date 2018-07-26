@@ -26,6 +26,7 @@ class CrateTableVenda extends Migration
             $table->increments('id');
             $table->integer('distancia');
             $table->integer('frete');
+            $table->timestamps();
         });
     }
 

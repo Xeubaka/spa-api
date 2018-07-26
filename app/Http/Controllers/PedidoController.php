@@ -7,17 +7,16 @@
 
   class PedidoController extends Controller
   {
-    public function createVinho(Request $request){
+    public function createPedido(Request $request){
 
       $pedido = Pedido::create($request->all());
 
-      return response()->json($pedido)
+      return response()->json($pedido, 201)
         ->header('Access-Control-Allow-Origin', '*')
-        ->header('Access-Control-Allow-Origin', 'GET, POST, PUT, DELETE')
       ;
     }
 
-    public function updateVinho(Request $request, $id){
+    public function updatePedido(Request $request, $id){
       $pedido = Pedido::find($id);
       $pedido->nome = $request->input('nome');
       $pedido->tipo = $request->input('tipo');
@@ -26,17 +25,15 @@
 
       return response()->json($pedido)
         ->header('Access-Control-Allow-Origin', '*')
-        ->header('Access-Control-Allow-Origin', 'GET, POST, PUT, DELETE')
       ;
     }
 
-    public function deleteVinho($id){
+    public function deletePedido($id){
       $pedido = Pedido::find($id);
       $pedido->delete();
 
       return response()->json('Removed successfully')
         ->header('Access-Control-Allow-Origin', '*')
-        ->header('Access-Control-Allow-Origin', 'GET, POST, PUT, DELETE')
       ;
     }
 
