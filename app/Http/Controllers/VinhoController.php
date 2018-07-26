@@ -28,6 +28,15 @@
       ;
     }
 
+    public function findVinho($id){
+
+      $vinho = Vinho::find($id);
+
+      return response()->json($vinho)
+        ->header('Access-Control-Allow-Origin', '*')
+      ;
+    }
+
     public function deleteVinho($id){
       $vinho = Vinho::find($id);
       $vinho->delete();

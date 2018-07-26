@@ -28,6 +28,15 @@
       ;
     }
 
+    public function findVenda($id){
+
+      $venda = Venda::find($id);
+
+      return response()->json($venda)
+        ->header('Access-Control-Allow-Origin', '*')
+      ;
+    }
+
     public function deleteVenda($id){
       $venda = Venda::find($id);
       $venda->delete();

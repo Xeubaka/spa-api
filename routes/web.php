@@ -17,6 +17,7 @@ $router->get('/', function () use ($router) {
 $router->get('/vinho', 'VinhoController@index');
 $router->group(['prefix' => 'vinho/'], function() use ($router)
 {
+  $router->get('view/{id}', 'VinhoController@findVinho');
   $router->get('lastId', 'VinhoController@lastId');
   $router->post('add', 'VinhoController@createVinho');
   $router->put('view/{id}', 'VinhoController@updateVinho');
@@ -25,6 +26,7 @@ $router->group(['prefix' => 'vinho/'], function() use ($router)
 $router->get('/venda', 'VendaController@index');
 $router->group(['prefix' => 'venda/'], function() use ($router)
 {
+  $router->get('view/{id}', 'VendaController@findVenda');
   $router->get('lastId', 'VendaController@lastID');
   $router->post('add', 'VendaController@createVenda');
   $router->put('view/{id}', 'VendaController@updateVenda');
@@ -34,6 +36,7 @@ $router->group(['prefix' => 'venda/'], function() use ($router)
 $router->get('/pedido', 'PedidoController@index');
 $router->group(['prefix' => 'pedido/'], function() use ($router)
 {
+  $router->get('view/{id}', 'PedidoController@findPedido');
   $router->get('lastId', 'PedidoController@lastId');
   $router->post('add', 'PedidoController@createPedido');
   $router->put('view/{id}', 'PedidoController@updatePedido');

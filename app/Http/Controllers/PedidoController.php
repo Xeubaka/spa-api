@@ -27,6 +27,14 @@
         ->header('Access-Control-Allow-Origin', '*')
       ;
     }
+    public function findPedido($id){
+
+      $pedido = Pedido::find($id);
+
+      return response()->json($pedido)
+        ->header('Access-Control-Allow-Origin', '*')
+      ;
+    }
 
     public function deletePedido($id){
       $pedido = Pedido::find($id);
