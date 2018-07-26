@@ -44,6 +44,12 @@
         ->header('Access-Control-Allow-Origin', '*')
       ;
     }
+    public function lastId(){
+      $pedido = app('db')->select('SELECT `id` FROM `pedido` ORDER BY `pedido`.`id` DESC limit 1');;
+      return response()->json($pedido)
+        ->header('Access-Control-Allow-Origin', '*')
+      ;
+    }
   }
 
 ?>
