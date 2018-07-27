@@ -14,4 +14,3 @@ Instruções:
   - baixar/clonar [repositório](https://github.com/Xeubaka/spa-api) para a pasta “C:\wamp64\www”, abrir [localhost](http://localhost/spa-api/public/) (deve aparecer a versão do lumen/laravel).
   - Assim que clonar, abra o repositório e renomeie o arquivo '.env.exemple' para '.env'
   - executar o comando “php artisan migrate” (cria as tabelas e colunas necessárias para aplicação)
-  - (para definir php como uma variável do sistema, pesquisar variáveis de ambiente e salvar o caminho no Path  ‘C:\wamp64\bin\php\php*’) * = versão do php instalada.
