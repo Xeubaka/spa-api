@@ -14,32 +14,32 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-$router->get('/vinho', 'VinhoController@index');
-$router->group(['prefix' => 'vinho/'], function() use ($router)
+$router->get('/Vinhos', 'VinhosController@index');
+$router->group(['prefix' => 'Vinhos/'], function() use ($router)
 {
-  $router->get('view/{id}', 'VinhoController@findVinho');
-  $router->get('lastId', 'VinhoController@lastId');
-  $router->post('add', 'VinhoController@createVinho');
-  $router->put('view/{id}', 'VinhoController@updateVinho');
-  $router->delete('delete/{id}', 'VinhoController@deleteVinho');
+  $router->get('view/{id}', 'VinhosController@findVinhos');
+  $router->get('lastId', 'VinhosController@lastId');
+  $router->post('add', 'VinhosController@createVinhos');
+  $router->put('view/{id}', 'VinhosController@updateVinhos');
+  $router->delete('delete/{id}', 'VinhosController@deleteVinhos');
 });
-$router->get('/venda', 'VendaController@index');
-$router->group(['prefix' => 'venda/'], function() use ($router)
+$router->get('/Pedidos', 'PedidosController@index');
+$router->group(['prefix' => 'Pedidos/'], function() use ($router)
 {
-  $router->get('view/{id}', 'VendaController@findVenda');
-  $router->get('lastId', 'VendaController@lastID');
-  $router->post('add', 'VendaController@createVenda');
-  $router->put('view/{id}', 'VendaController@updateVenda');
-  $router->delete('delete/{id}', 'VendaController@deleteVenda');
+  $router->get('view/{id}', 'PedidosController@findPedidos');
+  $router->get('lastId', 'PedidosController@lastID');
+  $router->post('add', 'PedidosController@createPedidos');
+  $router->put('view/{id}', 'PedidosController@updatePedidos');
+  $router->delete('delete/{id}', 'PedidosController@deletePedidos');
 
 });
-$router->get('/pedido', 'PedidoController@index');
-$router->group(['prefix' => 'pedido/'], function() use ($router)
+$router->get('/Produtos', 'ProdutosController@index');
+$router->group(['prefix' => 'Produtos/'], function() use ($router)
 {
-  $router->get('view/{id}', 'PedidoController@findPedido');
-  $router->get('lastId', 'PedidoController@lastId');
-  $router->post('add', 'PedidoController@createPedido');
-  $router->put('view/{id}', 'PedidoController@updatePedido');
-  $router->delete('delete/{id}', 'PedidoController@deletePedido');
+  $router->get('view/{id}', 'ProdutosController@findProdutos');
+  $router->get('lastId', 'ProdutosController@lastId');
+  $router->post('add', 'ProdutosController@createProdutos');
+  $router->put('view/{id}', 'ProdutosController@updateProdutos');
+  $router->delete('delete/{id}', 'ProdutosController@deleteProdutos');
 
 });
